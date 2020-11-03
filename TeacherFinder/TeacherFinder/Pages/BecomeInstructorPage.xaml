@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TeacherFinder.Pages.BecomeInstructorPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20">
+                <Label Text="Стати Викладачем" FontSize="Large" HorizontalOptions="Center"/>
+                <Image x:Name="ImgProfile" Source="placeholderhead.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapCamera" Tapped="TapCamera_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Entry Placeholder="Ім'я" x:Name="EntName"/>
+                <Entry Placeholder="Мова" x:Name="EntLanguage"/>
+                <Entry Placeholder="Національність" x:Name="EntNationality"/>
+                <Picker x:Name="PickerGender" Title="Стать">
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Others</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry Placeholder="Телефон" x:Name="EntPhone"/>
+                <Entry Placeholder="Email" x:Name="EntEmail"/>
+                <Entry Placeholder="Освіта" x:Name="EntEducation"/>
+                <Picker x:Name="PickerExperience" Title="Досвід роботи">
+                    <Picker.Items>
+                        <x:String>1 рік</x:String>
+                        <x:String>2 роки</x:String>
+                        <x:String>3 роки</x:String>
+                        <x:String>4 роки</x:String>
+                        <x:String>5+ років</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="PickerHourlyRate" Title="Оплата за час">
+                    <Picker.Items>
+                        <x:String>50 грн</x:String>
+                        <x:String>100 грн</x:String>
+                        <x:String>150 грн</x:String>
+                        <x:String>200 грн</x:String>
+                        <x:String>250 грн</x:String>
+                        <x:String>300 грн</x:String>
+                        <x:String>350 грн</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="PickerCourceDomain" Title="Предмет">
+                    <Picker.Items>
+                        <x:String>Англійська мова</x:String>
+                        <x:String>Математика</x:String>
+                        <x:String>Українська мова</x:String>
+                        <x:String>Німецька мова</x:String>
+                        <x:String>Польська мова</x:String>
+                        <x:String>Фізика</x:String>
+                        <x:String>Хімія</x:String>
+                        <x:String>Біологія</x:String>
+                        <x:String>Історія України</x:String>
+                        <x:String>Географія</x:String>
+                        <x:String>Програмування</x:String>
+                        <x:String>Молодші класи</x:String>
+                        <x:String>Підготовка до школи</x:String>
+                        <x:String>Французька мова</x:String>
+                        <x:String>Італійська мова</x:String>
+                        <x:String>Іспанська мова</x:String>
+                        <x:String>Фінанси</x:String>
+                        <x:String>Менеджмент</x:String>
+                        <x:String>Економіка</x:String>
+                        <x:String>Анатомія</x:String>
+                        <x:String>Ботаніка</x:String>
+                        <x:String>Генетика</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Picker x:Name="PickerCity" Title="Місто">
+                    <Picker.Items>
+                        <x:String>Вінниця</x:String>
+                        <x:String>Дніпро</x:String>
+                        <x:String>Донецьк</x:String>
+                        <x:String>Житомир</x:String>
+                        <x:String>Запоріжжя</x:String>
+                        <x:String>Івано-Франківськ</x:String>
+                        <x:String>Київ</x:String>
+                        <x:String>Кропивницький</x:String>
+                        <x:String>Луганськ</x:String>
+                        <x:String>Луцьк</x:String>
+                        <x:String>Львів</x:String>
+                        <x:String>Миколаїв</x:String>
+                        <x:String>Полтава</x:String>
+                        <x:String>Рівне</x:String>
+                        <x:String>Тернопіль</x:String>
+                        <x:String>Ужгород</x:String>
+                        <x:String>Харків</x:String>
+                        <x:String>Херсон</x:String>
+                        <x:String>Хмельницький</x:String>
+                        <x:String>Черкаси</x:String>
+                        <x:String>Чернівці</x:String>
+                        <x:String>Чернігів</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Entry x:Name="EntOneLineTitle" Placeholder="Короткий опис"/>
+                <Editor Placeholder="Опишіть себе" x:Name="EntDescription" HeightRequest="100"></Editor>
+                <Button TextColor="White" BackgroundColor="#42A5F5" Text="Подати заяву" x:Name="BtnApply" Clicked="BtnApply_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

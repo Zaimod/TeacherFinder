@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TeacherFinder.Pages.FindInstructorPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20" Padding="20">
+            <Picker ItemDisplayBinding="{Binding Name}" Title="Спеціальність" x:Name="PickerCourse"/>
+            <Picker ItemDisplayBinding="{Binding Name}" Title="Місто" x:Name="PickerCity"/>
+            <Picker Title="Стать" x:Name="PickerGender">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                    <x:String>Others</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button TextColor="White" BackgroundColor="#42A5F5" Text="Пошук" x:Name="BtnSearchInstructor" Clicked="BtnSearchInstructor_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

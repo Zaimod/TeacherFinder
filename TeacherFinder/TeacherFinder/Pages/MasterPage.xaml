@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pages="clr-namespace:TeacherFinder.Pages"
+                  mc:Ignorable="d"
+             x:Class="TeacherFinder.Pages.MasterPage">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master">
+
+            <StackLayout>
+                <Grid>
+                    <BoxView BackgroundColor="#42A5F5" HeightRequest="150"/>
+                    <Label Text="Teacher Finder" TextColor="Black" FontSize="Medium" Margin="15, 75, 0, 0"></Label>
+                </Grid>
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <Image Source="home.png"></Image>
+                    <Label Text="Додому" FontSize="Medium" VerticalOptions="Center" TextColor="Black"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapHome" Tapped="TapHome_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <Image Source="changepassword.png"></Image>
+                    <Label Text="Змінити пароль" FontSize="Medium" VerticalOptions="Center" TextColor="Black"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapChangePassword" Tapped="TapChangePassword_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <Image Source="instructor.png"></Image>
+                    <Label Text="Стати Викладачем" FontSize="Medium" VerticalOptions="Center" TextColor="Black"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapBecomeIntsructor" Tapped="TapBecomeIntsructor_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="20, 20, 0, 0" Spacing="20">
+                    <Image Source="logout.png"></Image>
+                    <Label Text="Вихід" FontSize="Medium" VerticalOptions="Center" TextColor="Black"></Label>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapLogout" Tapped="TapLogout_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage> 
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:HomePage></pages:HomePage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
